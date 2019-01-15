@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+	<meta charset="utf8">
+	<html>
+	<head>
+		<title> Armen Petrosyan </title>
+		<style class="text/css">
+			
+
+			@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+	
+			body{
+				background-image:url("img/bg_image.jpg");
+				background-repeat:no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+	
+			font-family:Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+.blurred-bg{
+
+	background-image:url("img/bg_blur.jpg");
+	background-repeat:no-repeat;
+	@include background-size(cover);
+	background-attachment: fixed;
+   
+	&.tinted{
+		@include background-image(linear-gradient(0deg, rgba(255,255,255,.2),rgba(255,255,255,.2)),url("img/bg_blur.jpg"));
+	}
+	&.shaded{
+		@include background-image(linear-gradient(0deg, rgba(0,0,0,.2),rgba(0,0,0,.2)),url("img/bg_blur.jpg"));
+	}
+}
+
+
+
+
+a:link {
+	text-decoration: none;
+	
+}
+a:visited {
+    text-decoration: underline;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+a:active {
+    text-decoration: underline;
+}
+
+
+.box{
+	width:500px;
+	height:300px;
+  left:-webkit-calc( 50% - 250px );
+  top:30%;
+	position:absolute;
+	border-radius:5px;
+	@include box-shadow(0 20px 30px rgba(0,0,0,.6));
+	border:1px solid rgba(255,255,255,.3);
+	padding:20px;
+	text-align: center;
+	@include box-sizing(border-box);
+	text-shadow:0 1px 1px rgba(0,0,0,.4);
+  display: block;
+  transition: box-shadow .3s ease;
+  
+	&:active{
+    cursor:move;
+    @include box-shadow(0 20px 50px rgba(0,0,0,.9));
+  }
+  
+  .content{
+    margin: auto;
+	width: 100% ;
+  }
+}
+
+
+
+
+a,p{
+	color:white;
+	font-weight:100;
+	height: 80%;
+
+  
+	.tinted &{
+		color:black;
+		text-shadow:0 1px 1px rgba(255,255,255,.2);
+	}
+}
+h1 {
+	color:white;
+	font-weight:100;
+	width: 100% ;
+	height: 24px;
+	text-align: inherited;
+  
+	.tinted &{
+		color:black;
+		text-shadow:0 1px 1px rgba(255,255,255,.2);
+	}
+}
+h2{ font-size: 14px;
+	color: white;
+	font-weight: 100;
+	text-align: inherited;}
+u{
+	text-decoration: underline;
+	}
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 93%;
+  
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+#buttonpos {
+	position: absolute;
+	left: 0px;
+	}
+img {
+position: absolute;
+    left: 845px;
+    top: 470px;
+    z-index: -1;
+	}
+#img1 {
+position: absolute;
+    left: -90px;
+    top: 0px;
+    z-index: -1;	
+	}
+	
+#img2 {
+position: absolute;
+    left: -180px;
+    top: 0px;
+    z-index: -1;	
+	}
+
+#img3 {
+position: absolute;
+    left: -270px;
+    top: 0px;
+    z-index: -1;	
+	}
+	
+.brightness {
+    background-color: white;
+    display: inline-block;
+
+}
+.on {
+	background-image:url("img/bg_blur.jpg");
+	
+	}
+.off {
+	background-image:url("img/bg_image.jpg");
+	}
+
+}
+#back input{
+    background: url(img/bg_blur.jpg);
+    border: hidden;
+}
+
+.brightness img:hover {
+    opacity: .5;
+}
+	
+p{ 
+  margin: 10px;
+  &.related{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #444;
+    
+   
+    }
+  }
+}
+		</style>
+	</head>
+	<body>
+	<div>
+	
+		<h1><u> Main </u></h1>
+		<h1><a href="/hobbies.html"> Hobbies </h1>
+		<h1><a href="/AboutMe.html"> About me </a></h1>
+		<h1><a href="/faq.html"> FAQ </h1>
+		<h1><a href="/contacts.html"> Contacts </a></h1>
+	</div>
+		
+	<div id="box1" class="box blurred-bg tinted">
+
+		<a id="back"><h1>AP CSP Project</h1></a>
+	    <br><h2> By <a href="https://www.instagram.com/armenpet/" rel="follow" target="_blank">Petrosyan, Armen</a></h2> 
+		<div class="brightness"><a href="https://www.instagram.com/armenpet/" rel="follow" target="_blank"><img src="img/Instagram.png"/></a>
+		</div>
+		<div id="img1" class="brightness"> <a href="https://www.facebook.com/armen.petrosyan.3720" rel="follow" target="_blank"><img src="img/Facebook.png"/><a/>
+		</div>
+		<div id="img2" class="brightness"><a href="https://twitter.com/ArmenPet2002" rel="follow" target="_blank"> <img src="img/Twitter.png"/></a>
+		</div>
+		<div id="img3" class="brightness"><a href="https://www.linkedin.com/in/armen-petrosyan-813087150/" rel="follow" target="_blank"><img src="img/LinkedIn.png"/><a/>
+		</div>
+	
+	</div>
+	<label class="switch">
+	<input class="off" onclick="toggleState(this)" type="checkbox">
+	<span class="slider"></span>
+	</label>
+	<script type="text/javascript">
+
+     function toggleState(item){
+           if(item.className == "on") {
+              item.className="off";
+           } else {
+              item.className="on";
+           }
+        }
+
+	</script>
+	
+	
+	</body>
+	
+</html>
